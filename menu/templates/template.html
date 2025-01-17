@@ -1,0 +1,7 @@
+{% if form.errors %}
+    <ul class="error-list">
+        {% for field, errors in form.errors.items %}
+            <li>{{ field }}: {{ errors|join:", " }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}

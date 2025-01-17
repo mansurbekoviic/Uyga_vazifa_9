@@ -1,0 +1,6 @@
+<h1>{{ dish.name }} dishni o'chirishni xohlaysizmi?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Ha</button>
+    <a href="{% url 'all_dishes' %}">Bekor qilish</a>
+</form>

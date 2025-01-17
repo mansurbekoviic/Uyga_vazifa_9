@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Bosh sahifa{% endblock %}
+
+{% block content %}
+<h1>Barcha Kategoriyalar</h1>
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Tavsiya etilgan Ovqatlar</h2>
+<div class="product-list">
+    {% for product in random_products %}
+        <div class="product">
+            <h3>{{ product.name }}</h3>
+            <p>Kategoriya: {{ product.category.name }}</p>
+            <p>Narxi: {{ product.price }} so'm</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcha Dishlar</title>
+</head>
+<body>
+    <h1>Barcha Dishlar</h1>
+    <ul>
+        {% for dish in dishes %}
+            <li>
+                <a href="{% url 'dish_detail' dish.id %}">{{ dish.name }}</a> - {{ dish.price }} so'm
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_dish' %}">Dish qo'shish</a> |
+    <a href="{% url 'add_category' %}">Category qo'shish</a>
+</body>
+</html>
